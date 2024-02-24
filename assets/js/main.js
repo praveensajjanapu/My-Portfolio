@@ -3,7 +3,19 @@
 * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
+
+
 */
+
+
+var typed = new Typed('.typing',{
+  strings: ["a student","Python Developer","Web Developer"],
+  loop: true,
+  typeSpeed: 80,
+  backSpeed: 80
+});
+
+
 !(function($) {
   "use strict";
 
