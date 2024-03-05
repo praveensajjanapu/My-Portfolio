@@ -121,6 +121,7 @@ var typed = new Typed('.typing',{
     offset: '80%'
   });
 
+
   // Testimonials carousel (uses the Owl Carousel library)
   $(".testimonials-carousel").owlCarousel({
     autoplay: true,
@@ -138,6 +139,7 @@ var typed = new Typed('.typing',{
       }
     }
   });
+  
 
   // Porfolio isotope and filter
   $(window).on('load', function() {
@@ -162,4 +164,77 @@ var typed = new Typed('.typing',{
     $('.venobox').venobox();
   });
 
+
+
+
+  /**
+ * Porfolio isotope and filter
+ */
+window.addEventListener('load', () => {
+  let portfolioContainer = document.querySelector('.projects-container'); // Updated selector
+  if (portfolioContainer) {
+    let portfolioIsotope = new Isotope(portfolioContainer, {
+      itemSelector: '.projects-item', // Updated selector
+      layoutMode: 'fitRows'
+    });
+
+    let portfolioFilters = document.querySelectorAll('#projects-flters li'); // Updated selector
+
+    portfolioFilters.forEach(filter => {
+      filter.addEventListener('click', function(e) {
+        e.preventDefault();
+        portfolioFilters.forEach(f => f.classList.remove('filter-active'));
+        this.classList.add('filter-active');
+
+        portfolioIsotope.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+      });
+    });
+  }
+});
+
+  
+
+
+/**
+ * Initiate portfolio lightbox 
+ */
+const portfolioLightbox = GLightbox({
+  selector: '.projects-lightbox' // Updated selector
+});
+
+/**
+ * Initiate portfolio details lightbox 
+ */
+const portfolioDetailsLightbox = GLightbox({
+  selector: '.portfolio-details-lightbox',
+  width: '90%',
+  height: '90vh'
+});
+
+/**
+ * Portfolio details slider
+ */
+new Swiper('.portfolio-details-slider', {
+  speed: 400,
+  loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true
+  }
+});
+
+/**
+ * Initiate Pure Counter 
+ */
+new PureCounter();
+
+
 })(jQuery);
+ 
