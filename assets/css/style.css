@@ -1456,6 +1456,10 @@ color: var(--snd-bg-color);
   color: #0679e6;
 }
 
+.download{
+  border: 2px solid #8520c0;
+  color: #8520c0;
+}
 
 /* #####################  Hover EFFECTS ############################# */
 
@@ -1481,6 +1485,10 @@ color: var(--snd-bg-color);
               0px 0px 7px #0679e6;
 }
 
+.download:hover {
+  box-shadow: 0px 0px 7px #8520c0 inset,
+    0px 0px 7px #8520c0;
+}
 
 
 

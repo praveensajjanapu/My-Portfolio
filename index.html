@@ -76,10 +76,8 @@
           <a href="mailto:sajjanapupraveen76@gmail.com" target="_blank" class="google"><i class="bx bxl-google"></i></a>
           
           <a href="https://www.instagram.com/praveen_sajjanapu?igsh=eGNscDN4cm9qczRh" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
-         <div class="Download">
-            <p><strong>Resume</strong><a href="assets/img/Resume.pdf" download="Resume.pdf" class="btn-box">  <img src="assets/img/icons8-download-35.png" alt="resume download option"> </a></p>
-          </div>
           
+          <a href="assets/img/Resume.pdf" download="Resume.pdf" class="download"><i class="bx bxs-download"></i></a>
           
       </div>
     </div>
@@ -376,8 +374,6 @@
       <div class="col-lg-12 d-flex justify-content-center">
         <ul id="portfolio-flters">
           <li data-filter="*" class="filter-active">Projects</li>
-          <!--<li data-filter=".filter-app">Web-App</li>
-          <li data-filter=".filter-project">Project</li>-->
         </ul>
       </div>
     </div>
@@ -385,42 +381,57 @@
     <div class="row portfolio-container">
 
       <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <center><h4>Sweat Analysis</h4></center>
+        <center>
+          <h4>Sweat Analysis</h4>
+        </center>
         <div class="portfolio-wrap">
           <img src="assets/img/certification/coursera.png" class="img-fluid" alt="">
           <div class="portfolio-info">
-            
             <div class="portfolio-links">
-              <a href="projects/sweatanalysis.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
+              <a href="#" class="project-link" data-title="Sweat Analysis" data-description="The objective of this project is to use sweat as a more convenient and painless biofluid for health examinations, replacing the need for blood or urine. Sweat samples are collected and analyzed to assess a person’s health, with alerts generated for any abnormal conditions detected when the sweat sensor is used.
+                                  <br><br>
+                                  <ul>
+                                    <li><strong>Tech Stack</strong>: ESP32 Microcontrollers, Internet of Things (IoT)</li>
+                                    <li><strong>Github URL</strong>: <a href='https://github.com/praveensajjanapu?tab=repositories' target='_blank'>Project Link</a></li>
+                                  </ul>"><i class="bx bx-info-circle"></i></a>
             </div>
           </div>
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <center><h4>Image recognition as Service</h4></center>
+        <center>
+          <h4>Image recognition as Service</h4>
+        </center>
         <div class="portfolio-wrap">
           <img src="assets/img/skills/matlab.png" class="img-fluid" alt="">
           <div class="portfolio-info">
-            
             <div class="portfolio-links">
-              <a href="projects/musicplayer.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
+              <a href="#" class="project-link" data-title="Image recognition as Service" data-description="This project provides image recognition as a service using MATLAB.
+                                  <br><br>
+                                  <ul>
+                                    <li><strong>Tech Stack</strong>: MATLAB</li>
+                                    <li><strong>Github URL</strong>: <a href='https://github.com/example' target='_blank'>Project Link</a></li>
+                                  </ul>"><i class="bx bx-info-circle"></i></a>
             </div>
           </div>
         </div>
       </div>
 
-    
-
       <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-        <!-- <br> -->
-        <center><h4>Resume Section Classifier</h4></center>
+        <center>
+          <h4>Resume Section Classifier</h4>
+        </center>
         <div class="portfolio-wrap">
           <img src="assets/img/certification/udemy.png" class="img-fluid" alt="">
           <div class="portfolio-info">
-            <h4>Resume Section Classifier</h4>
             <div class="portfolio-links">
-              <a href="projects/ml.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
+              <a href="#" class="project-link" data-title="Resume Section Classifier" data-description="This project classifies different sections of a resume using machine learning techniques.
+                                  <br><br>
+                                  <ul>
+                                    <li><strong>Tech Stack</strong>: Python, Machine Learning</li>
+                                    <li><strong>Github URL</strong>: <a href='https://github.com/example' target='_blank'>Project Link</a></li>
+                                  </ul>"><i class="bx bx-info-circle"></i></a>
             </div>
           </div>
         </div>
@@ -429,6 +440,85 @@
     </div>
   </div>
 </section>
+
+<!-- Modal for Project Description -->
+<div class="modal" id="projectModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="projectTitle">Project Title</h5>
+        
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Project description will be displayed here -->
+        <h5 class="modal-text" id="projectDescription">Project Title</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CSS for Modal -->
+<style>
+  .modal-content {
+    border-radius: 20px;
+  }
+
+  .modal-header {
+    background-color: #007bff;
+    color: #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .modal-title {
+    font-weight: bold;
+  }
+
+  .modal-body {
+    padding: 20px;
+
+  }
+
+  .modal-text {
+
+    color: black;
+  }
+
+  .project-title {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .project-description {
+    font-size: 16px;
+  }
+</style>
+
+
+<!-- JavaScript for Modal -->
+<!-- JavaScript for Modal -->
+<script>
+  // Wait for the document to fully load
+  document.addEventListener('DOMContentLoaded', function () {
+    // Add event listener to project links
+    document.querySelectorAll('.project-link').forEach(link => {
+      link.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link behavior
+        const title = this.getAttribute('data-title');
+        const description = this.getAttribute('data-description');
+        document.getElementById('projectTitle').innerText = title; // Update modal title with project title
+        document.getElementById('projectDescription').innerHTML = description; // Update modal body with project description
+        $('#projectModal').modal('show'); // Show the modal
+      });
+    });
+  });
+</script>
+
+
+
+
+
 
 <!-- End Project Section -->
 
