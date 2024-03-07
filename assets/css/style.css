@@ -196,6 +196,17 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
+/* Styles for screens smaller than 768px (laptops and tablets) */
+@media screen and (max-width: 768px) {
+  /* CSS rules for smaller screens */
+}
+
+/* Styles for screens smaller than 480px (smartphones) */
+@media screen and (max-width: 480px) {
+  /* CSS rules for even smaller screens */
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -366,6 +377,11 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 26px;
   }
 }
+
+
+
+
+
 
 /*--------------------------------------------------------------
 # Sections General
